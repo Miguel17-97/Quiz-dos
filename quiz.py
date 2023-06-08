@@ -1,4 +1,3 @@
-
 from selenium import webdriver #se importa la librería selenium para automatizar
 from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service # se crea un controlador el cual va a hacer lo que le digamos
@@ -67,7 +66,7 @@ for i in range(1, 5): #Ciclo for para listar los primeros cuatro productos
 producto = driver.find_element(By.XPATH, '/html/body/div[2]/div/div[1]/div/div[3]/div/div[11]/section/div[2]/div/div[3]/div/div[2]/div/div/div[6]/div/div/div/div[2]')
 time.sleep(1)
 producto.click()
-time.sleep(4)
+time.sleep(3)
 
 driver.execute_script("window.scrollTo(0,document.body.scrollHeight)") #El bot se dirige hacia el final de la página
 time.sleep(3)
@@ -78,5 +77,5 @@ time.sleep(1)
 youtube.click()
 time.sleep(1)
 
-driver.quit()
+driver.quit() #Finalizo el controlador para que no consuma recursos
 
